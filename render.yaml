@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: govmitra
+    runtime: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_APP_NAME
+        value: "GovMitra AI"

@@ -1,0 +1,426 @@
+@import "tailwindcss";
+
+:root {
+  --background: #060913;
+  --foreground: #f1f5f9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: #060913;
+  color: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 3D Glassmorphism & Refined Obsidian Glow Utilities */
+.glass-panel {
+  background: rgba(10, 16, 32, 0.78);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 36px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-panel-glow {
+  background: rgba(10, 18, 36, 0.85);
+  backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.neon-text-glow {
+  filter: drop-shadow(0 2px 10px rgba(16, 185, 129, 0.35));
+}
+
+.saffron-glow {
+  text-shadow: 0 0 20px rgba(245, 158, 11, 0.6);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Floating 3D Keyframes */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* Subtle Animated Cyber Grid Background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* ========================================================================== */
+/* COMPREHENSIVE LIGHT THEME ENGINE (World-Class Digital India Portal Design) */
+/* ========================================================================== */
+.light,
+html.light,
+body.light {
+  background-color: #fcfdfe !important;
+  background-image: 
+    radial-gradient(ellipse 60% 75% at 0% 20%, rgba(249, 115, 22, 0.09), transparent 65%),
+    radial-gradient(ellipse 60% 75% at 0% 75%, rgba(251, 146, 60, 0.07), transparent 65%),
+    radial-gradient(ellipse 60% 75% at 100% 25%, rgba(16, 185, 129, 0.09), transparent 65%),
+    radial-gradient(ellipse 60% 75% at 100% 80%, rgba(5, 150, 105, 0.07), transparent 65%) !important;
+  background-attachment: fixed !important;
+  color: #0f172a !important;
+}
+
+.light main {
+  background-color: transparent !important;
+}
+
+/* 1. Header & Navigation */
+.light header {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.light header .text-white {
+  color: #0f172a !important;
+}
+
+.light header button:not(.bg-gradient-to-r) {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light header button:not(.bg-gradient-to-r):hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* 2. Cyber Grid & Ambient Background */
+.light .cyber-grid {
+  background-color: #f8fafc !important;
+  background-size: 40px 40px !important;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px) !important;
+}
+
+/* 3. Global Cards & Glass Panels */
+.light .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 1px 3px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+.light .glass-panel-glow {
+  background: linear-gradient(135deg, #ffffff 65%, #f0fdf4) !important;
+  border: 1.5px solid rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 14px 40px -5px rgba(16, 185, 129, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  color: #0f172a !important;
+}
+
+/* 4. Headings & Typography */
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  color: #0f172a !important;
+}
+
+.light .text-white {
+  color: #0f172a !important;
+}
+
+.light .text-slate-100,
+.light .text-slate-200,
+.light .text-slate-300 {
+  color: #334155 !important;
+}
+
+.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* 5. Inner Card Micro-Surfaces & Badges */
+.light .bg-white\/\[0\.03\],
+.light .bg-white\/\[0\.04\],
+.light .bg-white\/\[0\.05\],
+.light .bg-white\/\[0\.06\],
+.light .bg-white\/\[0\.08\],
+.light .bg-white\/\[0\.1\] {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+.light .border-white\/\[0\.06\],
+.light .border-white\/\[0\.08\],
+.light .border-white\/\[0\.1\],
+.light .border-white\/10,
+.light .border-white\/20,
+.light .border-white\/30,
+.light .border-white\/40 {
+  border-color: #e2e8f0 !important;
+}
+
+/* 6. Dark Arbitrary Surfaces to Clean Pure White */
+.light .bg-\[\#090E17\]\/80,
+.light .bg-\[\#0A101D\],
+.light .bg-\[\#060913\],
+.light .bg-\[\#0D1527\] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* 7. Floating Trust Badges in Hero */
+.light .bg-black\/60,
+.light .bg-black\/50,
+.light .bg-black\/40 {
+  background-color: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.08) !important;
+}
+
+.light .bg-black\/60 p,
+.light .bg-black\/50 p,
+.light .bg-black\/40 p {
+  color: #0f172a !important;
+}
+
+/* 8. Marquee */
+.light .marquee-container {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 4px 15px -3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.light .marquee-fade-left {
+  background: linear-gradient(to right, #f8fafc, transparent) !important;
+}
+
+.light .marquee-fade-right {
+  background: linear-gradient(to left, #f8fafc, transparent) !important;
+}
+
+.light .marquee-pill {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+/* 9. Scheme Card Visuals */
+.light .scheme-card-image-overlay {
+  background: linear-gradient(to top, #ffffff 15%, rgba(255, 255, 255, 0.6) 55%, transparent 100%) !important;
+}
+
+.light .scheme-card-category-badge {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.light .scheme-card-audio-btn {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.light .scheme-card-matched-pill {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  color: #047857 !important;
+  border-color: #86efac !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.light .scheme-card-doc-btn {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #059669 !important;
+}
+
+.light .scheme-card-doc-btn:hover {
+  background-color: #f0fdf4 !important;
+  border-color: #10b981 !important;
+}
+
+.light .scheme-benefit-box {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
+  border: 1.5px solid #86efac !important;
+}
+
+.light .scheme-benefit-box p.text-white,
+.light .scheme-benefit-box .text-white {
+  color: #065f46 !important;
+}
+
+/* 10. Halo 3-Step Journey (01, 02, 03) */
+.light .bg-\[\#090E17\]\/80 h3,
+.light .bg-\[\#090E17\]\/80 p {
+  color: #0f172a !important;
+}
+
+.light .bg-\[\#090E17\]\/80 span.text-white {
+  color: #0f172a !important;
+}
+
+/* 11. Simulator Dropdowns & Range Sliders */
+.light .simulator-select {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+.light .simulator-option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+.light input[type="range"] {
+  accent-color: #059669 !important;
+}
+
+/* 12. Search Input Bar & Persona Buttons */
+.light input {
+  color: #0f172a !important;
+}
+
+.light input::placeholder {
+  color: #64748b !important;
+}
+
+.light form .glass-panel {
+  background-color: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 13. Benefit Counter Neon Glow in Light Mode */
+.light .neon-text-glow {
+  text-shadow: none !important;
+  color: #059669 !important;
+  background: linear-gradient(to right, #059669, #0d9488) !important;
+  -webkit-background-clip: text !important;
+}
+
+/* 14. Modals & Drawers in Light Mode */
+.light .voice-modal-content,
+.light .doc-modal-content,
+.light .drawer-content {
+  background-color: #fcfdfe !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.18) !important;
+}
+
+.light .voice-modal-content .sticky,
+.light .doc-modal-content .sticky,
+.light .drawer-content .sticky {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-bottom-color: #e2e8f0 !important;
+}
+
+.light .voice-modal-content h3,
+.light .voice-modal-content h4,
+.light .voice-modal-content h5,
+.light .doc-modal-content h3,
+.light .doc-modal-content h4,
+.light .drawer-content h3 {
+  color: #0f172a;
+}
+
+/* Drawer Photo Title and Subtitle - ALWAYS Crisp White over Image */
+.light h2.drawer-photo-title,
+.light .drawer-photo-title {
+  color: #ffffff !important;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95), 0 0 6px rgba(0, 0, 0, 0.9) !important;
+}
+
+.light p.drawer-photo-subtitle,
+.light .drawer-photo-subtitle {
+  color: #f1f5f9 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.9) !important;
+}
+
+.light .drawer-bottom-bar {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-top-color: #e2e8f0 !important;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 15. High Contrast Text & Badges in Light Mode */
+.light .text-emerald-300 { color: #047857 !important; }
+.light .text-rose-300 { color: #be123c !important; }
+.light .text-indigo-300 { color: #4338ca !important; }
+.light .text-cyan-300 { color: #0e7490 !important; }
+.light .text-amber-300 { color: #b45309 !important; }
+.light .text-purple-300 { color: #7e22ce !important; }
+.light .text-orange-300 { color: #c2410c !important; }
+
+.light .from-orange-400.via-white.to-emerald-400 {
+  background-image: linear-gradient(to right, #ea580c, #0f172a, #059669) !important;
+}
+
+/* 16. Buttons Contrast in Light Mode */
+.light button:not(.bg-gradient-to-r) {
+  border-color: #cbd5e1;
+}
+
+.light button.text-slate-300 {
+  color: #334155 !important;
+}
+
+.light button.text-slate-400 {
+  color: #475569 !important;
+}
+
+/* 17. Footer in Light Mode */
+.light footer {
+  background-color: #ffffff !important;
+  border-top-color: #e2e8f0 !important;
+  color: #475569 !important;
+}
